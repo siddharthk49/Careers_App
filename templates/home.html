@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <title>First Flask Web Page</title>
+</head>
+<body>
+<div id="container" class = "container">
+<h1 class = "text-center">Flask Careers App</h1>
+<img class = "img-fluid" id="banner" src="static/Careers.jpg" alt="Home Screen Image" width="1280", height="720">
+<h2>About Flask Careers</h2>
+<p class ="lead">This is a simple flask job portal application with which users can apply for jobs</p>
+  <h2 class = "text-center">Open Positions</h2>
+  <div>
+    {% for job in jobs %}
+      {% include 'jobitems.html' %}
+    {%endfor%}
+  </div>
+<button>Contact Us</button>
+</div>
+</body>
+</html>
